@@ -5,8 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yatzy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="475" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBox Focusable="False" FontWeight="Bold">Players</TextBox>
+            <TextBox Focusable="False">Ones</TextBox>
+            <TextBox Focusable="False">Twos</TextBox>
+            <TextBox Focusable="False">Threes</TextBox>
+            <TextBox Focusable="False">Fours</TextBox>
+            <TextBox Focusable="False">Fives</TextBox>
+            <TextBox Focusable="False">Sixes</TextBox>
+            <TextBox Focusable="False" FontWeight="Bold">Sum</TextBox>
+            <TextBox Focusable="False" FontWeight="Bold">Bonus</TextBox>
+            <TextBox Focusable="False">One pair</TextBox>
+            <TextBox Focusable="False">Two pair</TextBox>
+            <TextBox Focusable="False">Three of a kind</TextBox>
+            <TextBox Focusable="False">Four of a kind</TextBox>
+            <TextBox Focusable="False">Small straight</TextBox>
+            <TextBox Focusable="False">Large straight</TextBox>
+            <TextBox Focusable="False">Full House</TextBox>
+            <TextBox Focusable="False">Chance</TextBox>
+            <TextBox Focusable="False">Yatzy</TextBox>
+            <TextBox Focusable="False" FontWeight="Bold">Total</TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" FontWeight="Bold" Text="Player 1" Name="pOneName" MaxLength="20"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Ones" Text="Ones" Name="pOneOnes" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Twos" Text="Twos" Name="pOneTwos" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Threes" Text="Threes" Name="pOneThrees" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Fours" Text="Fours" Name="pOneFours" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Fives" Text="Fives" Name="pOneFives" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Sixes" Text="Sixes" Name="pOneSixes" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Sum" Name="pOneSum"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Bonus" Name="pOneBonus"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="OnePair" Text="Pair" Name="pOneOnePair" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="TwoPair" Text="Two pairs" Name="pOneTwoPair" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="ThreeOfAKind" Text="Three of a kind" Name="pOneThreeOfAKind" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="FourOfAKind" Text="Four of a kind" Name="pOneFourOfAKind" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="SmallStraight" Text="Small straight" Name="pOneSmallStraight" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="LargeStraight" Text="Large straight" Name="pOneLargeStraight" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="FullHouse" Text="Full house" Name="pOneFullHouse" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Chance" Text="Chance" Name="pOneChance" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Yatzy" Text="Yatzy" Name="pOneYatzy" MouseDoubleClick="POneScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Total" Name="pOneTotal"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" FontWeight="Bold" Text="Player 2" Name="pTwoName" MaxLength="20"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Ones" Text="Ones" Name="pTwoOnes" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Twos" Text="Twos" Name="pTwoTwos" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Threes" Text="Threes" Name="pTwoThrees" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Fours" Text="Fours" Name="pTwoFours" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Fives" Text="Fives" Name="pTwoFives" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Sixes" Text="Sixes" Name="pTwoSixes" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Sum" Name="pTwoSum"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Bonus" Name="pTwoBonus"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="OnePair" Text="One pair" Name="pTwoOnePair" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="TwoPair" Text="Two pair" Name="pTwoTwoPair" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="ThreeOfAKind" Text="Three of a kind" Name="pTwoThreeOfAKind" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="FourOfAKind" Text="Four of a kind" Name="pTwoFourOfAKind" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="SmallStraight" Text="Small straight" Name="pTwoSmallStraight" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="LargeStraight" Text="Large straight" Name="pTwoLargeStraight" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="FullHouse" Text="Full House" Name="pTwoFullHouse" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Chance" Text="Chance" Name="pTwoChance" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" Tag="Yatzy" Text="Yatzy" Name="pTwoYatzy" MouseDoubleClick="PTwoScoreBoard_DoubleClick"></TextBox>
+            <TextBox HorizontalContentAlignment="Center" FontStyle="Oblique" Focusable="False" FontWeight="Bold" Text="Total" Name="pTwoTotal"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBlock HorizontalAlignment="Center" FontSize="16">Check the dices that</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16">you don't want to</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16">re-roll.</TextBlock>
+            <CheckBox HorizontalAlignment="Center" FontSize="16" Margin="0,20,0,0" Name="CheckBoxDiceOne" IsThreeState="False" IsEnabled="False" FlowDirection="RightToLeft">Dice 1</CheckBox>
+            <CheckBox HorizontalAlignment="Center" FontSize="16" Margin="0,40,0,0" Name="CheckBoxDiceTwo" IsThreeState="False" IsEnabled="False" FlowDirection="RightToLeft">Dice 2</CheckBox>
+            <CheckBox HorizontalAlignment="Center" FontSize="16" Margin="0,40,0,0" Name="CheckBoxDiceThree" IsThreeState="False" IsEnabled="False" FlowDirection="RightToLeft">Dice 3</CheckBox>
+            <CheckBox HorizontalAlignment="Center" FontSize="16" Margin="0,40,0,0" Name="CheckBoxDiceFour" IsThreeState="False" IsEnabled="False" FlowDirection="RightToLeft">Dice 4</CheckBox>
+            <CheckBox HorizontalAlignment="Center" FontSize="16" Margin="0,40,0,20" Name="CheckBoxDiceFive" IsThreeState="False" IsEnabled="False" FlowDirection="RightToLeft">Dice 5</CheckBox>
+            <TextBlock HorizontalAlignment="Center" FontSize="16">Doubleclick in your</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16">scoreboard where to</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16">place your result.</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="4">
+            <TextBlock HorizontalAlignment="Center" FontSize="16" Text="Your Turn:" Name="YourTurn"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16" Text="Player 1" Name="WhosTurn"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="16" Text="Rolls left: 3" Name="TextBoxRollsLeft"></TextBlock>
+            <Image Source="/Images/d0.png" Width="50" Margin="5" Name="ImageDiceOne"></Image>
+            <Image Source="/Images/d0.png" Width="50" Margin="5" Name="ImageDiceTwo"></Image>
+            <Image Source="/Images/d0.png" Width="50" Margin="5" Name="ImageDiceThree"></Image>
+            <Image Source="/Images/d0.png" Width="50" Margin="5" Name="ImageDiceFour"></Image>
+            <Image Source="/Images/d0.png" Width="50" Margin="5" Name="ImageDiceFive"></Image>
+            <Button Width="125" Height="30" Margin="0,31,0,0" FontSize="16" Content="Roll dice" Click="RollDice" Name="ButtonRollDice"></Button>
+        </StackPanel>
     </Grid>
 </Window>
